@@ -11,6 +11,15 @@ namespace Lab4
             phone.OperatingSystem = OS.Android;
             var human = new Human();
             human.Phone = phone;
+            var application = new Application();
+            try
+            {
+                human.InstallApplication(application);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("There was a problem installing the app");
+            }
         }
     }
 }
